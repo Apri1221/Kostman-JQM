@@ -1,15 +1,15 @@
 var Application = {
 	initApplication : function() {
 		$(window).load('pageinit', '#page-one', function(){
-			Application.initShowMhs();
+			Application.initShowKmr();
 		})
 		$(document).on('click', '#detail-kmr', function(){
 			var no_kmr = $(this).data('nmrkmr');
-			Application.initShowDetailMhs(no_kmr);
+			Application.initShowDetailKmr(no_kmr);
 		})
 	},
 
-	initShowMhs : function(){
+	initShowKmr : function(){
 		$.ajax({
 			url : 'http://localhost/apri2/php/kamar.php',
 			type : 'post',
@@ -39,7 +39,7 @@ var Application = {
 		});		
 	},
 
-	initShowDetailMhs : function(no_kmr){
+	initShowDetailKmr : function(no_kmr){
 		$.ajax({
 			url : 'http://localhost/apri2/php/kamar.php',
 			type : 'post',
