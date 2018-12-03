@@ -11,8 +11,11 @@ var Application = {
 
 	initShowMhs : function(){
 		$.ajax({
-			url : 'https://apri.inseed.web.id/kamar.php',
-			type : 'get',
+			url : 'http://localhost/apri2/php/kamar.php',
+			type : 'post',
+			data: {
+                id_ibu: localStorage.getItem('id_ibu'),
+            },
 			beforeSend : function() {
 				$.mobile.loading('show', {
 					text : 'Please wait while retrieving data...',
@@ -38,8 +41,12 @@ var Application = {
 
 	initShowDetailMhs : function(no_kmr){
 		$.ajax({
-			url : 'https://apri.inseed.web.id/kamar.php',
-			type : 'get',
+			url : 'http://localhost/apri2/php/kamar.php',
+			type : 'post',
+			data: {
+                id_kamar: no_kmr,
+                id_ibu: localStorage.getItem('id_ibu'),
+            },
 			beforeSend : function() {
 				$.mobile.loading('show', {
 					text : 'Please wait while retrieving data...',

@@ -11,7 +11,7 @@ var Application = {
 
     initShowSwa: function() {
         $.ajax({
-            url: "https://apri.inseed.web.id/penyewaan.php",
+            url: "http://localhost/apri2/php/penyewaan.php",
             type: "post",
             data: {
                 id_ibu: localStorage.getItem('id_ibu'),
@@ -40,10 +40,10 @@ var Application = {
 
     initShowDetailSwa: function(penyewaan) {
         $.ajax({
-            url: "https://apri.inseed.web.id/penyewaan.php",
+            url: "http://localhost/apri2/php/penyewaan.php",
             type: "post",
             data: {
-                id_ibu: '1',
+                id_ibu: localStorage.getItem('id_ibu'),
             },
             beforeSend: function() {
                 $.mobile.loading('show', {
@@ -76,6 +76,9 @@ var Application = {
                     }
                 }
             },
+            error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+            },       
             complete: function() {
                 $.mobile.loading("hide");
             }
