@@ -27,10 +27,10 @@ var Application = {
                 for (var i = 0; i < dataPenyewaan.length; i++) {
                     var appendList = '<li class="listitem"><a href="#page-detail_penyewaan?id=' + dataPenyewaan[i].id_penyewa +
                         '" target="_self" id="detail-penyewaan" data-penyewaan="' + dataPenyewaan[i].id_penyewa + '"><img src="img/arsip.png" style="margin:18px 8px 18px; "><h2>' + dataPenyewaan[i].id_anak + '</h2><h2>' + dataPenyewaan[i].jumlah_uang + '</h2><p>' + dataPenyewaan[i].tanggal_masuk + '</p><p><b>' + dataPenyewaan[i].id_kamar + '</b></p></a></li>'
-                    $('#list-mhs').append(appendList);
+                    $('#list-swa').append(appendList);
                 }
                 // buatan apri
-                $('#list-mhs').listview('refresh');
+                $('#list-swa').listview('refresh');
             },
             complete: function() {
                 $.mobile.loading("hide");
@@ -162,26 +162,15 @@ $(function() {
                 required: 'Ini juga isi mas',
                 min: 'Mulai gak jelas'
             }
-        },
-        submitHandler: function() {
-            alert("Data berhasil ditambahkan!");
-            $.ajax({
-                url: "http://localhost/apri2/php/crudpenyewaan.php",
-                type: "post",
-                data: {
-                    id_ibu: $('#penyewaan').val(),
-                    nama_anak: $('#nama_anak').val(),
-                    jumlah_uang: $('#jumlah_uang').val(),
-                    harga_kamar: $('#harga_kamar').val(),
-                    tanggal_masuk: $('#tanggal_keluar').val(),
-                    tanggal_keluar: $('#tanggal_keluar').val(),
-                    no_kamar: $('#no_kamar').val()
-                },
-                success: function(data) {
-                    console.log(data);
-                }
-            });
         }
     });
-
 });
+
+$(document).ready(function(){
+    $("submitSwa").click(function(){
+        $.ajax({
+            url: ,
+            
+        });
+    })
+})
