@@ -16,4 +16,17 @@ if(isset($_POST['id_ibu'])) {
 
 	MYSQLI_CLOSE($conn);
 }
+else {
+	$QUERY = MYSQLI_QUERY($conn,"SELECT * FROM penyewaan");
+
+	$data = array(); // versi simple
+	while ($ROW = MYSQLI_FETCH_ASSOC($QUERY)){
+    	$data[] = $ROW;
+	}
+	header('Content-Type:application/json;charset=utf-8');
+	ECHO JSON_ENCODE($data);
+
+	MYSQLI_CLOSE($conn);	
+}
+
 ?>
