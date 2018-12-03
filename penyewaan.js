@@ -14,7 +14,7 @@ var Application = {
             url: "http://localhost/apri2/php/penyewaan.php",
             type: "post",
             data: {
-                id_ibu: localStorage.getItem('id_ibu'),
+                id_ibu: localStorage.getItem('id_ibu')
             },
             beforeSend: function() {
                 $.mobile.loading('show', {
@@ -43,7 +43,7 @@ var Application = {
             url: "http://localhost/apri2/php/penyewaan.php",
             type: "post",
             data: {
-                id_ibu: localStorage.getItem('id_ibu'),
+                id_ibu: localStorage.getItem('id_ibu')
             },
             beforeSend: function() {
                 $.mobile.loading('show', {
