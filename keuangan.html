@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aplikasi Sistem Informasi Kos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+    <link rel="stylesheet" type="text/css" href="css/mycss.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-
+1.4.5.min.js"></script>
+    <link href="dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+    <script src="dist/js/datepicker.min.js"></script>
+    <!-- Include English language -->
+    <script src="dist/js/i18n/datepicker.en.js"></script>
+
+</head>
+
+<body>
+    <div data-role="page" id="page-one">
+        <!-- navbarnya -->
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" class="ui-body-a">
+            <h1>Keuangan</h1>
+            <a href="#panel" class="ui-btn ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-bars">Menu</a>
+            <a href="#panel2" class="ui-btn ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-user">Akun</a>
+        </div>
+        <div role="main" class="ui-content">
+            <a href="#" data-role="button" data-theme="f" data-icon="refresh" data-inline="true" value="Refresh Page" onclick="window.location.reload(true)">Segar</a>
+            <br>
+            <ul id="list-keu" data-role="listview" data-inset="true" data-filter="true">
+            </ul>
+        </div>
+    </div>
+    <div data-role="page" id="page-two">
+        <div data-role="header">
+            <h1>Detail Keuangan</h1>
+        </div>
+        <div role="main" class="ui-content" id="main2">
+            <p id="p-pemilik"></p><br>
+            <p id="p-id_kamar"></p><br>
+            <p id="p-tanggal_transaksi"></p><br>
+            <p id="p-jumlah_pemasukan"></p><br>
+            <p id="p-jumlah_pengeluaran"></p><br>
+        </div>
+    </div>
+    <script src="keuangan.js" type="text/javascript"></script>
+    <script src="template.js" type="text/javascript"></script>
+    <script>
+        Application.initApplication();
+    </script>
+</body>
+
+</html>

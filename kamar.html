@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aplikasi Sistem Informasi Kos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+    <link rel="stylesheet" type="text/css" href="css/mycss.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-
+1.4.5.min.js"></script>
+    <link href="dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+    <script src="dist/js/datepicker.min.js"></script>
+    <!-- Include English language -->
+    <script src="dist/js/i18n/datepicker.en.js"></script>
+<head/>
+
+<body>
+	<div data-role="page" id="page-one">
+		<!-- navbarnya -->
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" class="ui-body-a">
+            <h1>Daftar Kamar</h1>
+            <a href="#panel" class="ui-btn ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-bars">Menu</a>
+            <a href="#panel2" class="ui-btn ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-user">Akun</a>
+        </div>
+
+		<div role="main" class="ui-content">
+			<a href="#" data-role="button" data-theme="f" data-icon="refresh" data-inline="true" value="Refresh Page" onclick="window.location.reload(true)">Segar</a>
+            <br>
+			<ul id="list-kmr" data-role="listview" data-inset="true" data-filter="true">
+			</ul>
+		</div>
+	</div>
+
+	<div data-role="page" id="page-two">
+		<div data-role="header">
+			<h1>Detail Kamar</h1>
+		</div>
+
+		<div role="main" class="ui-content" id="main2">
+			<p id="p-nokmr"></p><br>
+			<p id="p-penghuni"></p><br>
+			<p id="p-pemilik"></p><br>
+			<p id="p-status"></p><br>
+			<p id="p-ukuran"></p><br>
+			<p id="p-km"></p><br>
+			<p id="p-meja"></p><br>
+			<p id="p-kursi"></p><br>
+			<p id="p-lemari"></p><br>
+			<p id="p-tv"></p><br>
+			<p id="p-ac"></p><br>
+		</div>
+	</div>
+	
+	<!-- halaman About Us-->
+    <div data-role="page" id="page-about_us">
+        <!-- navbarnya -->
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" class="ui-body-a">
+            <h1>Tentang Kami</h1>
+            <a href="#panel" class="ui-btn ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-bars">Menu</a>
+            <a href="#panel2" class="ui-btn ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-user">Akun</a>
+        </div>
+        <div data-role="content">
+            <h2>Kami ingin membantu masyarakat</h2>
+            <div class="team">
+                <h2>Filosofi Kami</h2>
+                <p>Berangkat dari tugas kuliah PPK yang membingungkan, apri pun berusaha mencari ide bagaimana agar apri bisa menyelesaikan mata kuliah dengan hasil yang baik berdasarkan kerja kerasnya.</p>
+                <p class="quote">Serius, source code laporan PPK banyak bug nya dan kini bisa diatasi satu per satu.</p>
+                <hr class="blankseparator" />
+                <h2>Our Latest Work</h2>
+                <div>
+                    <video controls>
+                        <source src="https://dl.dropbox.com/s/f4fkk11aqqbo2qa/Rekam8.mp4?dl=0">
+                    </video>
+                </div>
+                <hr class="blankseparator" />
+                <h2>Motivasi Saya</h2>
+                <p>Tertarik mengatasi bug nya meskipun orang lain masa bodoh dan tidak berhasil memperbaikinya. Tertarik pada web daripada android sehingga saya mencoba membenci java dan mencintai javascript meskipun awalnya php.</p>
+                <p class="quote">Kita satu brawijaya. Saya keluar PK2?</p>
+            </div>
+            <!-- social -->
+            <div class="social">
+                <a href="#"><img src="https://dl.dropbox.com/s/3qrqmlr5x4pnpp8/facebook.png?dl=0" alt="facebook"></a>
+                <a href="https://twitter.com/apri0498"><img src="https://dl.dropbox.com/s/uljoo6h8obg7zxd/twitter.png?dl=0" alt="twitter"></a>
+                <a href="https://www.instagram.com/apri0498"><img src="https://dl.dropbox.com/s/23vos8f2k2jr5y0/instagram.png?dl=0" alt="google"></a>
+            </div>
+        </div>
+    </div>
+
+	<script src="kamar.js" type="text/javascript"></script>
+	<script src="template.js" type="text/javascript"></script>
+	<script>Application.initApplication();</script>
+</body>
+</html>

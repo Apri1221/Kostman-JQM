@@ -1,0 +1,156 @@
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+.team {
+	width:100%;
+}
+
+.team h3 {
+	text-align:center;
+	border-bottom:1px solid #fff;
+	margin-bottom:0px;
+	margin-top:0px;
+	border-bottom:1px solid #fff;
+	border-top:1px solid #fff;
+	padding:10px;
+}
+.team h3.home-title {
+	background:none;
+	border:none;
+}
+.team ul {
+	border-bottom:1px dashed #cdcdcd;
+	margin-top:4px;
+}
+.team ul li {
+	text-align:center;
+	font-size:15px;
+	font-family:'Lato', sans-serif;
+	padding:5px 0;
+	margin-left:-40px;
+}
+.team ul li a {
+	font-size:14px;
+	font-style:italic;
+}
+
+.blankseparator {
+	background:none;
+	border:none;
+	height:1px;
+	display: block;
+	margin: 20px 0;
+}
+
+/* Quote */
+.about h2 {
+	background: rgba(255, 255, 255, 0.5);
+	border:1px solid #efefef;
+	padding:5px;
+	font-size:1.2em;
+}
+p.quote {
+	border-top:1px dotted #dcdcdc;
+	border-bottom:1px dotted #dcdcdc;
+	padding:5px 0 5px 0;
+	font-style:italic;
+	font-weight:bold;
+	font-size:1em;
+	color:#5c6886;
+}
+
+/* Homepage Social Icons */
+div.social {
+	text-align:center;
+	background-color: #75afbe;
+	background: rgba(117, 175, 190, 0.3);
+	padding:4px;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+	-webkit-transition-duration:0.5s;
+	-moz-transition-duration:0.5s;
+	-o-transition-duration:0.5s;
+	transition-duration:0.5s;
+	cursor:pointer;
+}
+div.social:hover {
+	background-color: #75afbe;
+	background: rgba(117, 175, 190, 0.5);
+	border-top:1px solid #efefef;
+	border-bottom:1px solid #efefef;
+}
+div.social img {
+	width:12%;
+	margin-right:10px;
+	margin-top:5px;
+	max-width:32px;
+}
+
+video {
+   width:100%;
+   max-width:500px;
+   height:auto;
+}
+
+.listitem {
+    margin-top: 2px !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+button {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    background: #5185a8;
+    color: #fff;
+    text-decoration: none;
+    font-family: arial, verdana, sans-serif;
+    font-size: 14px;
+}
+.demo-non-form {
+    color: initial;
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    font-family: arial, verdana, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+.demo-container {
+    padding: 0 1em;
+}
+
+.external-container {
+    display: flex;
+}
+
+.external-container button.external-button {
+    font-weight: 400;
+    padding: 10px;
+    margin: 6px 0 12px 16px;
+}
+
+.help-block {
+  color: red;
+}
