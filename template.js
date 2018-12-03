@@ -7,7 +7,7 @@ var Template = {
         // Mengirim POST request untuk mendapatkan token
         $.ajax({
             type: "POST",
-            url: "http://localhost/apri2/php/loginloginan.php",
+            url: "https://apri.inseed.web.id/loginloginan.php",
             dataType: "json",
             data: {
                 id_ibu: localStorage.getItem('id_ibu')

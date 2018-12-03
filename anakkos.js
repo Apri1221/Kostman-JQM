@@ -12,7 +12,10 @@ var Application = {
     initShowMhs : function(){
         $.ajax({
             url: 'https://apri.inseed.web.id/anakkos.php',
-            type: 'get',
+            type: 'post',
+            data: {
+                id_ibu:localStorage.getItem('id_ibu')
+            },
             beforeSend : function(){
                 $.mobile.loading('show',{
                     text: 'Please wait...',
@@ -40,7 +43,10 @@ var Application = {
     initShowDetailMhs : function(idAnak){
         $.ajax({
             url: 'https://apri.inseed.web.id/anakkos.php',
-            type: 'get',
+            type: 'post',
+            data: {
+                id_ibu: localStorage.getItem('id_ibu')
+            },
             beforeSend : function(){
                 $.mobile.loading('show',{
                     text: 'Please wait...',

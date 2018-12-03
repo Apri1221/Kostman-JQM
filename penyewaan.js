@@ -7,11 +7,14 @@ var Application = {
             var penyewaan = $(this).data('penyewaan');
             Application.initShowDetailSwa(penyewaan);
         })
+        $(document).on('click', '#submitSwa', function() {
+            Application.addSwa();
+        })
     },
 
     initShowSwa: function() {
         $.ajax({
-            url: "http://localhost/apri2/php/penyewaan.php",
+            url: "https://apri.inseed.web.id/penyewaan.php",
             type: "post",
             data: {
                 id_ibu: localStorage.getItem('id_ibu')
@@ -40,7 +43,7 @@ var Application = {
 
     initShowDetailSwa: function(penyewaan) {
         $.ajax({
-            url: "http://localhost/apri2/php/penyewaan.php",
+            url: "https://apri.inseed.web.id/penyewaan.php",
             type: "post",
             data: {
                 id_ibu: localStorage.getItem('id_ibu')
@@ -84,6 +87,27 @@ var Application = {
                 $.mobile.loading("hide");
             }
         });
+    },
+
+    addSwa: function() {
+        $.ajax({
+            url: "http://localhost/apri2/php/crudpenyewaan.php",
+            type: "post",
+            data: $("#form_sewa").serialize(),
+            beforeSend: function() {
+                $.mobile.loading('show', {
+                    text: "Mohon ditunggu sedang mengirim data",
+                    textVisible: true
+                });
+            },
+            success: function(respon) {
+                console.log(respon);
+                window.location.href = '#page-penyewaan';
+            },
+            complete: function() {
+                $.mobile.loading("hide");
+            }
+        });
     }
 };
 
@@ -106,10 +130,10 @@ $(function() {
 
     $.validator.addMethod('cek_harga', function(value, element, param) {
         return this.optional(element) || value <= $(param).val();
-    }, 'Masa harga kamar lebih kecil dari harga bayar');
+    });
     $.validator.addMethod('cek_bayar', function(value, element, param) {
         return this.optional(element) || value >= $(param).val();
-    }, 'Masa harga bayar lebih besar dari harga kamar');
+    });
 
 
     $("#form_sewa").validate({
@@ -166,11 +190,3 @@ $(function() {
     });
 });
 
-$(document).ready(function(){
-    $("submitSwa").click(function(){
-        $.ajax({
-            url: ,
-            
-        });
-    })
-})

@@ -11,7 +11,7 @@ var Application = {
 
 	initShowKmr : function(){
 		$.ajax({
-			url : 'http://localhost/apri2/php/kamar.php',
+			url : 'https://apri.inseed.web.id/kamar.php',
 			type : 'post',
 			data: {
                 id_ibu: localStorage.getItem('id_ibu')
@@ -41,7 +41,7 @@ var Application = {
 
 	initShowDetailKmr : function(no_kmr){
 		$.ajax({
-			url : 'http://localhost/apri2/php/kamar.php',
+			url : 'https://apri.inseed.web.id/kamar.php',
 			type : 'post',
 			data: {
                 id_kamar: no_kmr,

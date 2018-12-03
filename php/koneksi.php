@@ -14,7 +14,7 @@ define('USER','root');
 // sesuaikan nama user
 define('PASS','apriyanto12');
 // sesuaiakan nama password
-define('DB','indekos');//sesuaiakan nama database
+define('DB','indekos2');//sesuaiakan nama database
 
 // define('DB','inseedwe_indekos');
 
