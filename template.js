@@ -18,6 +18,7 @@ var Template = {
                     localStorage.nama_ibu = response[i].nama;
                 }
                 document.getElementById('disini').innerHTML = localStorage.getItem('nama_ibu');
+                document.getElementById('penyewaan').value = localStorage.getItem('id_ibu');
             },
             error: function() {
                 $('#loginField').append("<div class='alert alert-danger' role='alert'>" +

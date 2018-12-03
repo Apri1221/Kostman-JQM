@@ -29,8 +29,8 @@ var Application = {
                         '" target="_self" id="detail-penyewaan" data-penyewaan="' + dataPenyewaan[i].id_penyewa + '"><img src="img/arsip.png" style="margin:18px 8px 18px; "><h2>' + dataPenyewaan[i].id_anak + '</h2><h2>' + dataPenyewaan[i].jumlah_uang + '</h2><p>' + dataPenyewaan[i].tanggal_masuk + '</p><p><b>' + dataPenyewaan[i].id_kamar + '</b></p></a></li>'
                     $('#list-mhs').append(appendList);
                 }
-                    // buatan apri
-                    $('#list-mhs').listview('refresh');
+                // buatan apri
+                $('#list-mhs').listview('refresh');
             },
             complete: function() {
                 $.mobile.loading("hide");
@@ -76,9 +76,10 @@ var Application = {
                     }
                 }
             },
-            error: function(XMLHttpRequest, textStatus, errorThrown) { 
-                alert("Status: " + textStatus); alert("Error: " + errorThrown); 
-            },       
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert("Status: " + textStatus);
+                alert("Error: " + errorThrown);
+            },
             complete: function() {
                 $.mobile.loading("hide");
             }
@@ -162,18 +163,24 @@ $(function() {
                 min: 'Mulai gak jelas'
             }
         },
-        submitHandler: function(form) {
+        submitHandler: function() {
             alert("Data berhasil ditambahkan!");
             $.ajax({
-                url: "http://localhost/apri2/crudpenyewaan.php",
-                type: "POST",
-                data: new FormData($(form).serialize()),
-                cache: false,
-                processData: false,
+                url: "http://localhost/apri2/php/crudpenyewaan.php",
+                type: "post",
+                data: {
+                    id_ibu: $('#penyewaan').val(),
+                    nama_anak: $('#nama_anak').val(),
+                    jumlah_uang: $('#jumlah_uang').val(),
+                    harga_kamar: $('#harga_kamar').val(),
+                    tanggal_masuk: $('#tanggal_keluar').val(),
+                    tanggal_keluar: $('#tanggal_keluar').val(),
+                    no_kamar: $('#no_kamar').val()
+                },
                 success: function(data) {
+                    console.log(data);
                 }
             });
-            return false;
         }
     });
 
